@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: music-to-piano-api-v6
+    env: docker
+    rootDir: backend
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: MAX_UPLOAD_MB
+        value: "300"
+      - key: DATA_DIR
+        value: /data
